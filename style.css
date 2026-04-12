@@ -7,34 +7,24 @@
 body {
   background: #f8f6f2;
   font-family: 'Outfit', sans-serif;
-  color: #2b2b2b;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px 80px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  padding: 20px 80px;
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
 }
 
 .logo { height: 50px; }
 
 .title {
   font-family: 'Libre Baskerville', serif;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .subtitle {
@@ -42,47 +32,103 @@ body {
   color: #777;
 }
 
-nav a {
-  margin-left: 25px;
-  color: #333;
-  text-decoration: none;
-  position: relative;
+/* SECTION */
+.section {
+  padding: 140px 80px;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  width: 0%;
-  height: 1px;
-  background: #c59d5f;
-  transition: 0.3s;
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  font-family: 'Libre Baskerville', serif;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url("images/hero.jpg") center/cover no-repeat;
+/* ROOM ULTRA */
+.room.ultra {
   display: flex;
+  margin-bottom: 100px;
+  gap: 60px;
   align-items: center;
-  padding-left: 10%;
 }
 
-.hero h1 {
-  font-size: 5rem;
+.room.reverse {
+  flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.room-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.room-image img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.room:hover img {
+  transform: scale(1.08);
+}
+
+.tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
   color: white;
-  text-shadow: 0 4px 25px rgba(0,0,0,0.3);
+  padding: 6px 12px;
+  border-radius: 10px;
 }
 
-.hero p {
-  background: rgba(255,255,255,0.7);
-  padding: 10px;
-  border-radius: 6px;
-  margin: 20px 0;
+/* INFO */
+.room-info {
+  flex: 1;
+}
+
+.room-info h3 {
+  font-size: 2rem;
+  font-family: 'Libre Baskerville', serif;
+  margin-bottom: 15px;
+}
+
+.room-info p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.features span {
+  background: #eee;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+/* BOTTOM */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: #c59d5f;
+}
+
+.urgency {
+  color: red;
+  font-size: 0.9rem;
 }
 
 /* BUTTON */
@@ -96,103 +142,25 @@ nav a:hover::after {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-}
-
-.btn.small {
-  padding: 10px 20px;
-}
-
-/* SECTIONS */
-.section {
-  padding: 120px 80px;
-  text-align: center;
-}
-
-.dark { background: #f1eee9; }
-
-/* ROOMS GRID */
-.rooms-grid {
-  display: flex;
-  gap: 40px;
-  margin-top: 60px;
-}
-
-.room-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: 0.4s;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.room-card:hover {
-  transform: translateY(-10px);
-}
-
-.room-card img {
-  width: 100%;
-}
-
-.room-content {
-  padding: 25px;
-  text-align: left;
-}
-
-.room-content h3 {
-  font-family: 'Libre Baskerville', serif;
-}
-
-.room-content span {
-  color: #c59d5f;
-  display: block;
-  margin: 10px 0;
+  transform: scale(1.05);
 }
 
 /* BOOKING */
-.booking-buttons {
-  margin-top: 40px;
+.booking {
+  text-align: center;
 }
 
-.booking-btn {
+.booking-links a {
   margin: 10px;
+  display: inline-block;
   padding: 12px 25px;
   border: 1px solid #c59d5f;
   border-radius: 25px;
-  color: #c59d5f;
   text-decoration: none;
+  color: #c59d5f;
 }
 
-.booking-btn:hover {
+.booking-links a:hover {
   background: #c59d5f;
   color: white;
-}
-
-.contact-box {
-  margin-top: 30px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-/* FADE ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 1s;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
