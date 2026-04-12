@@ -1,13 +1,16 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   background: #f8f6f2;
   color: #2b2b2b;
   font-family: 'Outfit', sans-serif;
+  line-height: 1.6;
 }
 
 /* NAVBAR */
@@ -19,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .logo {
@@ -31,10 +34,23 @@ nav a {
   text-decoration: none;
   color: #333;
   font-size: 1rem;
+  position: relative;
 }
 
-nav a:hover {
-  color: #c59d5f;
+/* subtle underline animation */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #c59d5f;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
@@ -44,31 +60,17 @@ nav a:hover {
   display: flex;
   align-items: center;
   padding-left: 10%;
-  position: relative;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(248, 246, 242, 0.6) 0%,
-    rgba(248, 246, 242, 0.3) 35%,
-    rgba(248, 246, 242, 0.1) 55%,
-    transparent 75%
-  );
-}
-}
-
+/* CLEAN TEXT */
 .hero-text {
-  position: relative;
   max-width: 600px;
 }
 
 .hero h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: 5.5rem;
-  color: #2b2b2b;
+  line-height: 1.1;
 }
 
 .hero p {
@@ -85,7 +87,7 @@ nav a:hover {
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -104,12 +106,18 @@ nav a:hover {
   text-align: center;
 }
 
+.section h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.8rem;
+}
+
 .section-desc {
   max-width: 700px;
   margin: 20px auto;
   color: #555;
 }
 
+/* LIGHT SECTION ALT */
 .dark {
   background: #f1eee9;
 }
@@ -119,7 +127,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   gap: 60px;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .room.reverse {
@@ -129,7 +137,12 @@ nav a:hover {
 .room img {
   width: 50%;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.room img:hover {
+  transform: scale(1.02);
 }
 
 .room-text {
@@ -148,6 +161,10 @@ nav a:hover {
   color: #555;
 }
 
+.room-text ul {
+  margin-bottom: 20px;
+}
+
 .room-text li {
   margin-bottom: 8px;
   color: #555;
@@ -160,16 +177,12 @@ nav a:hover {
   font-weight: 500;
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 #contact {
-  background: #fff;
+  background: #ffffff;
 }
 
-/* SMOOTH FEEL */
+/* SMOOTH IMAGE FEEL */
 img {
-  transition: 0.4s;
-}
-
-.room img:hover {
-  transform: scale(1.03);
+  transition: all 0.4s ease;
 }
