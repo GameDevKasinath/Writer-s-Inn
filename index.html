@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Writer's Inn</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- PREMIUM FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,71 +16,100 @@
 
 <header class="nav">
   <img src="images/logo.png" class="logo">
+
   <nav>
     <a href="#">Home</a>
     <a href="#rooms">Rooms</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
+  <div class="overlay"></div>
+
+  <div class="hero-text">
     <h1>Writer's Inn</h1>
-    <p>Where silence meets story.</p>
-    <a href="#rooms" class="btn">Explore Stay</a>
+    <p>
+      A serene homestay nestled in nature, crafted for travellers who seek quiet,
+      comfort and meaningful moments.
+    </p>
+    <a href="#rooms" class="btn">Explore Rooms</a>
   </div>
 </section>
 
-<section id="rooms" class="section reveal">
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>A Thoughtfully Designed Stay</h2>
+  <p class="section-desc">
+    At Writer's Inn, every space is created to offer calm, clarity and comfort.
+    Whether you're a traveller, a writer, or simply someone looking to unwind,
+    this is a place where time slows down and experiences feel personal.
+  </p>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms" class="section dark">
   <h2>Our Rooms</h2>
 
-  <div class="cards">
+  <!-- ROOM 1 -->
+  <div class="room">
+    <img src="images/room1.jpg">
 
-    <div class="card">
-      <img src="images/room1.jpg">
-      <div class="card-content">
-        <h3>Heritage Double Room</h3>
-        <p>Spacious interiors with refined comfort and premium amenities.</p>
-        <a href="#" class="btn">Book Now</a>
-      </div>
+    <div class="room-text">
+      <h3>Heritage Double Room</h3>
+      <p>
+        A spacious and elegant room designed with heritage elements and modern comfort.
+        Ideal for couples or solo travellers seeking a peaceful and refined stay.
+      </p>
+
+      <ul>
+        <li>✔ Queen Size Bed</li>
+        <li>✔ Air Conditioning</li>
+        <li>✔ Garden View</li>
+      </ul>
+
+      <span>From ₹2,500 / night</span>
+
+      <a href="#" class="btn">Book Now</a>
     </div>
-
-    <div class="card">
-      <img src="images/room2.jpg">
-      <div class="card-content">
-        <h3>Heritage Twin Room</h3>
-        <p>Peaceful surroundings with lush greenery and natural light.</p>
-        <a href="#" class="btn">Book Now</a>
-      </div>
-    </div>
-
   </div>
+
+  <!-- ROOM 2 -->
+  <div class="room reverse">
+    <img src="images/room2.jpg">
+
+    <div class="room-text">
+      <h3>Heritage Twin Room</h3>
+      <p>
+        Designed for friends or families, this room blends comfort with functionality,
+        offering twin beds and a relaxing environment surrounded by nature.
+      </p>
+
+      <ul>
+        <li>✔ Twin Beds</li>
+        <li>✔ Spacious Layout</li>
+        <li>✔ Natural Lighting</li>
+      </ul>
+
+      <span>From ₹2,200 / night</span>
+
+      <a href="#" class="btn">Book Now</a>
+    </div>
+  </div>
+
 </section>
 
-<section id="gallery" class="section dark reveal">
-  <h2>Gallery</h2>
-
-  <div class="gallery">
-    <img src="images/gallery1.jpg" onclick="openLightbox(this.src)">
-    <img src="images/gallery2.jpg" onclick="openLightbox(this.src)">
-    <img src="images/hero.jpg" onclick="openLightbox(this.src)">
-  </div>
-</section>
-
-<section id="contact" class="section reveal">
+<!-- CONTACT -->
+<section id="contact" class="section">
   <h2>Book Your Stay</h2>
-  <p>Contact us directly for best rates</p>
-  <a href="#" class="btn">WhatsApp Booking</a>
+  <p class="section-desc">
+    Reach out directly for availability and best prices. We’d love to host you.
+  </p>
+
+  <a href="#" class="btn big">WhatsApp Booking</a>
 </section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img">
-</div>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">💬</a>
 
 <script src="script.js"></script>
 
