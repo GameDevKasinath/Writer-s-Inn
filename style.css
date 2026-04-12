@@ -1,138 +1,158 @@
-/* Base resets */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body and sections */
 body {
-    font-family: 'Inter', sans-serif;
-    background: #f5f1e9; /* warm cream background matching logo */
-    color: #2f3e2f; /* dark forest green for text */
-}
-.section {
-    padding: 60px 30px;
-    text-align: center;
-}
-.section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-}
-.section p {
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
 }
 
-/* Header */
+/* NAVBAR */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: #f5f1e9;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
+
 .logo img {
-    height: 50px; /* adjust as needed */
+  height: 50px;
 }
+
 nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #2f3e2f;
-    font-size: 0.95rem;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: 0.3s;
 }
+
 nav a:hover {
-    color: #556b4f; /* slightly lighter green on hover */
+  color: #d4af37;
 }
 
-/* Hero Section */
+/* HERO */
 .hero {
-    height: 85vh;
-    background: url('images/hero.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.overlay {
-    background: rgba(245,241,233,0.85);
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    max-width: 90%;
-}
-.overlay h2 {
-    font-size: 2.8rem;
-}
-.overlay p {
-    margin: 15px 0;
-    font-size: 1.1rem;
+  height: 100vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
-/* Buttons */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  animation: fadeUp 1.5s ease;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+}
+
+.hero p {
+  margin: 20px 0;
+  opacity: 0.8;
+}
+
+/* BUTTON */
 .btn {
-    display: inline-block;
-    background: #556b4f;
-    color: white;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    margin-top: 15px;
+  padding: 12px 30px;
+  background: #d4af37;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* Rooms Grid (Flex) */
-.room-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-.room {
-    max-width: 300px;
-}
-.room img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+.btn:hover {
+  transform: scale(1.1);
+  background: #fff;
 }
 
-/* Gallery */
+/* SECTIONS */
+.section {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+.dark {
+  background: #111;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.card img {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* GALLERY */
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
+
 .gallery img {
-    width: 220px;
-    margin: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s;
+  width: 200px;
+  transition: 0.4s;
 }
+
 .gallery img:hover {
-    transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-/* WhatsApp Button */
-#whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-}
-#whatsapp-button img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-/* Footer */
-footer {
-    background: #2f3e2f;
-    color: #eee;
-    text-align: center;
-    padding: 10px;
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
