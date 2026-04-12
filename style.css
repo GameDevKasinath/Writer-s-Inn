@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(10px);
 }
@@ -26,7 +25,6 @@ body {
 
 .title {
   font-family: 'Libre Baskerville', serif;
-  font-weight: bold;
 }
 
 .subtitle {
@@ -44,10 +42,10 @@ nav a {
 .hero {
   height: 100vh;
   background: url("images/hero.jpg") center/cover no-repeat;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero-overlay {
@@ -80,11 +78,6 @@ nav a {
   padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
 }
 
 /* SECTION */
@@ -113,28 +106,12 @@ nav a {
 
 .room-image {
   flex: 1;
-  position: relative;
-  overflow: hidden;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .room-image img {
   width: 100%;
-  transition: 0.5s;
-}
-
-.room:hover img {
-  transform: scale(1.08);
-}
-
-.tag {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 10px;
 }
 
 .room-info {
@@ -146,70 +123,47 @@ nav a {
   font-family: 'Libre Baskerville', serif;
 }
 
-.room-info p {
-  margin: 15px 0;
-  color: #555;
-}
-
-/* FEATURES */
-.features {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
 .features span {
   background: #eee;
   padding: 8px 12px;
   border-radius: 20px;
+  margin-right: 10px;
 }
 
-/* BOTTOM */
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.price {
-  font-size: 1.8rem;
-  color: #c59d5f;
-}
-
-.urgency {
-  color: red;
-  font-size: 0.9rem;
-}
-
-/* BOOKING */
-.booking {
+/* BOOKING BUTTONS */
+.booking h2 {
+  margin-bottom: 50px;
   text-align: center;
 }
 
-.booking h2 {
-  margin-bottom: 60px;
-}
-
 .booking-links {
-  margin-top: 20px;
-}
+  text-align: center;
 }
 
 .booking-links a {
-  margin: 10px;
-  padding: 12px 25px;
-  border: 1px solid #c59d5f;
-  border-radius: 25px;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 12px;
+  padding: 14px 25px;
+
+  border: 1.5px solid #c59d5f;
+  border-radius: 50px;
+
   color: #c59d5f;
+  text-decoration: none;
+  font-weight: 500;
+
+  background: white;
+  transition: 0.3s;
+}
+
+.booking-links a img {
+  height: 20px;
 }
 
 .booking-links a:hover {
   background: #c59d5f;
   color: white;
-}
-
-.contact-box {
-  margin-top: 20px;
 }
