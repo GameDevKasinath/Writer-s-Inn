@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Mobile viewport for responsiveness【12†L221-L230】 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writer's Inn</title>
-
-    <!-- Elegant Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
+    <title>Writer&#8217;s Inn</title>
+    <!-- Google Fonts (serif for headings, sans for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <div class="logo">
-        <img src="images/logo.jpg" alt="Writer's Inn Logo">
+        <img src="images/logo.jpg" alt="Writer&#8217;s Inn Logo">
     </div>
     <nav>
         <a href="#about">About</a>
@@ -36,18 +34,24 @@
 <section id="about" class="section">
     <h2>About Writer’s Inn</h2>
     <p>
-        A serene homestay surrounded by nature, designed for comfort, calm, and meaningful experiences.
+        Nestled in the lush greenery of Kerala, Writer’s Inn offers a serene escape with 
+        modern comforts and genuine hospitality. Each stay blends tradition with luxury 
+        for an unforgettable experience.
     </p>
 </section>
 
 <section id="rooms" class="section light">
     <h2>Our Rooms</h2>
-
     <div class="room-container">
         <div class="room">
-            <img src="images/room1.jpg">
+            <img src="images/room1.jpg" alt="Deluxe Room">
             <h3>Deluxe Room</h3>
-            <p>Spacious AC room with a peaceful ambiance.</p>
+            <p>Spacious AC room with tranquil garden views and premium amenities.</p>
+        </div>
+        <div class="room">
+            <img src="images/room2.jpg" alt="Standard Room">
+            <h3>Standard Room</h3>
+            <p>Cozy non-AC room, elegantly furnished for a comfortable stay.</p>
         </div>
     </div>
 </section>
@@ -55,20 +59,35 @@
 <section id="gallery" class="section">
     <h2>Gallery</h2>
     <div class="gallery">
-        <img src="images/1.jpg">
-        <img src="images/2.jpg">
-        <img src="images/3.jpg">
+        <img src="images/1.jpg" alt="Living Area">
+        <img src="images/2.jpg" alt="Courtyard">
+        <img src="images/3.jpg" alt="Garden View">
+        <img src="images/4.jpg" alt="Breakfast Spread">
     </div>
 </section>
 
 <section id="contact" class="section light">
     <h2>Book Your Stay</h2>
-    <p>📞 +91 8921732121</p>
-    <p>📧 your@email.com</p>
+    <p>📞 +91 XXXXXXXXXX <!-- replace with your phone including country code --></p>
+    <p>📧 email@example.com <!-- replace with your email --></p>
+    <!-- Google Maps iframe (place your API key or embed code) -->
+    <iframe
+      src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Nilambur,Kerala+India"
+      width="100%" height="300" frameborder="0" style="border:0;"
+      allowfullscreen="" aria-label="Google Map">
+    </iframe>
 </section>
 
+<!-- Floating WhatsApp “Book Now” Button -->
+<div id="whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=91XXXXXXXXXX" target="_blank" aria-label="Chat on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" 
+             alt="WhatsApp Icon">
+    </a>
+</div>
+
 <footer>
-    <p>© 2026 Writer's Inn</p>
+    <p>© 2026 Writer&#8217;s Inn. All rights reserved.</p>
 </footer>
 
 </body>
