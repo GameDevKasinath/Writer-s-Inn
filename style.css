@@ -6,63 +6,61 @@
 
 body {
   background: #f8f6f2;
-  color: #2b2b2b;
   font-family: 'Outfit', sans-serif;
+  color: #2b2b2b;
 }
 
 /* NAVBAR */
 .nav {
   position: fixed;
   width: 100%;
-  padding: 25px 80px;
+  padding: 20px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* BRAND */
 .brand {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.logo {
-  height: 55px;
-}
+.logo { height: 50px; }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 🔥 FIXED ORDER + SIZE */
 .title {
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.4rem;
   font-weight: 700;
-  color: #1a1a1a;
 }
 
 .subtitle {
-  font-size: 0.8rem;
-  color: #6b6b6b;
-  letter-spacing: 1px;
+  font-size: 0.75rem;
+  color: #777;
 }
 
-/* NAV */
 nav a {
-  margin-left: 30px;
-  text-decoration: none;
+  margin-left: 25px;
   color: #333;
-  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
 }
 
-nav a:hover {
-  color: #c59d5f;
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  background: #c59d5f;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
@@ -74,130 +72,127 @@ nav a:hover {
   padding-left: 10%;
 }
 
-.hero-text {
-  max-width: 600px;
-}
-
 .hero h1 {
-  font-size: 5.5rem;
-  font-family: 'Libre Baskerville', serif;
-  color: #fff;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 4px 25px rgba(0,0,0,0.3);
 }
 
 .hero p {
-  margin: 25px 0;
-  font-size: 1.2rem;
-  background: rgba(255,255,255,0.75);
-  padding: 12px 16px;
-  border-radius: 8px;
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 6px;
+  margin: 20px 0;
 }
 
 /* BUTTON */
 .btn {
-  display: inline-block;
-  padding: 14px 32px;
   background: #c59d5f;
-  color: #fff;
+  color: white;
+  padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.small {
+  padding: 10px 20px;
 }
 
 /* SECTIONS */
 .section {
-  padding: 140px 80px;
+  padding: 120px 80px;
   text-align: center;
 }
 
-.section h2 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 3rem;
-}
+.dark { background: #f1eee9; }
 
-.section-desc {
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.dark {
-  background: #f1eee9;
-}
-
-/* 🔥 ROOMS FIXED (BIGGER TEXT) */
-.room {
+/* ROOMS GRID */
+.rooms-grid {
   display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-top: 100px;
+  gap: 40px;
+  margin-top: 60px;
 }
 
-.room.reverse {
-  flex-direction: row-reverse;
-}
-
-.room img {
-  width: 50%;
+.room-card {
+  background: white;
   border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-.room-text {
-  width: 50%;
+.room-card:hover {
+  transform: translateY(-10px);
+}
+
+.room-card img {
+  width: 100%;
+}
+
+.room-content {
+  padding: 25px;
   text-align: left;
 }
 
-.room-text h3 {
-  font-size: 2.8rem; /* BIGGER */
-  margin-bottom: 20px;
+.room-content h3 {
   font-family: 'Libre Baskerville', serif;
 }
 
-.room-text p {
-  font-size: 1.15rem; /* BIGGER */
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.room-text li {
-  font-size: 1.05rem;
-  margin-bottom: 8px;
-}
-
-.room-text span {
-  display: block;
-  margin-bottom: 25px;
-  font-size: 1.2rem;
+.room-content span {
   color: #c59d5f;
+  display: block;
+  margin: 10px 0;
 }
 
 /* BOOKING */
 .booking-buttons {
   margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
 }
 
 .booking-btn {
-  padding: 14px 28px;
+  margin: 10px;
+  padding: 12px 25px;
   border: 1px solid #c59d5f;
   border-radius: 25px;
   color: #c59d5f;
   text-decoration: none;
-  font-size: 1rem;
 }
 
 .booking-btn:hover {
   background: #c59d5f;
-  color: #fff;
+  color: white;
 }
 
 .contact-box {
-  margin-top: 40px;
-  background: #f8f6f2;
-  padding: 30px;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* FADE ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
