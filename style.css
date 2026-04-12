@@ -16,7 +16,6 @@ body {
   padding: 20px 80px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(10px);
 }
@@ -43,8 +42,8 @@ nav a {
   height: 100vh;
   background: url("images/hero.jpg") center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -92,11 +91,11 @@ nav a {
   font-family: 'Libre Baskerville', serif;
 }
 
-/* ROOMS */
+/* ROOMS FIXED */
 .room.ultra {
   display: flex;
   gap: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   align-items: center;
 }
 
@@ -106,31 +105,56 @@ nav a {
 
 .room-image {
   flex: 1;
-  border-radius: 20px;
-  overflow: hidden;
 }
 
 .room-image img {
   width: 100%;
+  border-radius: 20px;
 }
 
 .room-info {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.room-info h3 {
-  font-size: 2rem;
-  font-family: 'Libre Baskerville', serif;
+.room-info p {
+  line-height: 1.7;
+  color: #555;
+}
+
+/* FEATURES FIXED */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .features span {
   background: #eee;
   padding: 8px 12px;
   border-radius: 20px;
-  margin-right: 10px;
 }
 
-/* BOOKING BUTTONS */
+/* BOTTOM FIXED */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.6rem;
+  color: #c59d5f;
+}
+
+.urgency {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* BOOKING */
 .booking h2 {
   margin-bottom: 50px;
   text-align: center;
@@ -144,19 +168,13 @@ nav a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   margin: 12px;
   padding: 14px 25px;
-
   border: 1.5px solid #c59d5f;
   border-radius: 50px;
-
   color: #c59d5f;
   text-decoration: none;
-  font-weight: 500;
-
   background: white;
-  transition: 0.3s;
 }
 
 .booking-links a img {
@@ -166,4 +184,16 @@ nav a {
 .booking-links a:hover {
   background: #c59d5f;
   color: white;
+}
+
+/* APPLE-LIKE ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
