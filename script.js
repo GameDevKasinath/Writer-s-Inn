@@ -1,26 +1,10 @@
-// NAVBAR SCROLL EFFECT
-window.addEventListener("scroll", () => {
-  document.querySelector(".nav").classList.toggle("scrolled", window.scrollY > 50);
-});
-
-// SCROLL REVEAL
-const reveals = document.querySelectorAll(".reveal");
+const nav = document.querySelector(".nav");
 
 window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
+  if (window.scrollY > 50) {
+    nav.style.background = "rgba(0,0,0,0.7)";
+    nav.style.backdropFilter = "blur(10px)";
+  } else {
+    nav.style.background = "transparent";
+  }
 });
-
-// LIGHTBOX
-function openLightbox(src) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = src;
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
