@@ -50,7 +50,14 @@ nav a:hover {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(248,246,242,0.9), transparent);
+  background: linear-gradient(
+    to right,
+    rgba(248, 246, 242, 0.6) 0%,
+    rgba(248, 246, 242, 0.3) 35%,
+    rgba(248, 246, 242, 0.1) 55%,
+    transparent 75%
+  );
+}
 }
 
 .hero-text {
