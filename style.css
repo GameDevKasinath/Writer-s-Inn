@@ -197,3 +197,126 @@ nav a {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =========================
+   📱 MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav {
+    padding: 15px 20px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.6rem;
+  }
+
+  nav {
+    display: none; /* clean mobile look */
+  }
+
+  /* HERO */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 80px 20px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+
+  /* ROOMS STACK PROPERLY */
+  .room.ultra {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .room.reverse {
+    flex-direction: column;
+  }
+
+  .room-image img {
+    border-radius: 15px;
+  }
+
+  .room-info {
+    gap: 15px;
+  }
+
+  .room-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .room-info p {
+    font-size: 0.95rem;
+  }
+
+  /* FEATURES */
+  .features {
+    gap: 8px;
+  }
+
+  .features span {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  /* PRICE + BUTTON FIX */
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+
+  .bottom .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* BOOKING */
+  .booking-links a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .contact-box {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+  }
+}
