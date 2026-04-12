@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
 body {
   background: #f8f6f2;
   color: #2b2b2b;
@@ -22,35 +20,46 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  transition: all 0.3s ease;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
   height: 55px;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+/* NAV LINKS */
 nav a {
   margin-left: 30px;
   text-decoration: none;
   color: #333;
   font-size: 1rem;
-  position: relative;
 }
 
-/* subtle underline animation */
-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background: #c59d5f;
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
+nav a:hover {
+  color: #c59d5f;
 }
 
 /* HERO */
@@ -62,7 +71,6 @@ nav a:hover::after {
   padding-left: 10%;
 }
 
-/* CLEAN TEXT */
 .hero-text {
   max-width: 600px;
 }
@@ -70,13 +78,17 @@ nav a:hover::after {
 .hero h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: 5.5rem;
-  line-height: 1.1;
 }
 
+/* 🔥 FIXED TEXT VISIBILITY */
 .hero p {
   margin: 25px 0;
   font-size: 1.2rem;
-  color: #444;
+  color: #1f1f1f; /* darker for readability */
+  background: rgba(255,255,255,0.65);
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 /* BUTTON */
@@ -87,12 +99,11 @@ nav a:hover::after {
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: #a67c3d;
-  transform: translateY(-2px);
 }
 
 .btn.big {
@@ -117,7 +128,6 @@ nav a:hover::after {
   color: #555;
 }
 
-/* LIGHT SECTION ALT */
 .dark {
   background: #f1eee9;
 }
@@ -138,11 +148,6 @@ nav a:hover::after {
   width: 50%;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease;
-}
-
-.room img:hover {
-  transform: scale(1.02);
 }
 
 .room-text {
@@ -161,10 +166,6 @@ nav a:hover::after {
   color: #555;
 }
 
-.room-text ul {
-  margin-bottom: 20px;
-}
-
 .room-text li {
   margin-bottom: 8px;
   color: #555;
@@ -175,14 +176,4 @@ nav a:hover::after {
   margin-bottom: 25px;
   color: #c59d5f;
   font-weight: 500;
-}
-
-/* CONTACT */
-#contact {
-  background: #ffffff;
-}
-
-/* SMOOTH IMAGE FEEL */
-img {
-  transition: all 0.4s ease;
 }
