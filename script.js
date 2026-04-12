@@ -1,14 +1,26 @@
-// Smooth scroll effect already via CSS
+// NAVBAR SCROLL EFFECT
+window.addEventListener("scroll", () => {
+  document.querySelector(".nav").classList.toggle("scrolled", window.scrollY > 50);
+});
 
-// Fade in elements on scroll (Replit style)
-const elements = document.querySelectorAll(".section");
+// SCROLL REVEAL
+const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-  elements.forEach(el => {
-    const pos = el.getBoundingClientRect().top;
-    if (pos < window.innerHeight - 100) {
-      el.style.opacity = "1";
-      el.style.transform = "translateY(0)";
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
     }
   });
 });
+
+// LIGHTBOX
+function openLightbox(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
