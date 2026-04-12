@@ -34,15 +34,23 @@ body {
   height: 55px;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔥 FIXED ORDER + SIZE */
 .title {
   font-family: 'Libre Baskerville', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: #1a1a1a;
-  font-weight: 600;
 }
 
 .subtitle {
-  font-size: 0.75rem;
-  color: #5a5a5a;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+  letter-spacing: 1px;
 }
 
 /* NAV */
@@ -50,6 +58,7 @@ nav a {
   margin-left: 30px;
   text-decoration: none;
   color: #333;
+  font-size: 1rem;
 }
 
 nav a:hover {
@@ -65,17 +74,33 @@ nav a:hover {
   padding-left: 10%;
 }
 
+.hero-text {
+  max-width: 600px;
+}
+
 .hero h1 {
   font-size: 5.5rem;
+  font-family: 'Libre Baskerville', serif;
   color: #fff;
   text-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
 .hero p {
-  margin: 20px 0;
-  background: rgba(255,255,255,0.7);
-  padding: 10px;
+  margin: 25px 0;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,0.75);
+  padding: 12px 16px;
   border-radius: 8px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #c59d5f;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
 }
 
 /* SECTIONS */
@@ -84,13 +109,26 @@ nav a:hover {
   text-align: center;
 }
 
+.section h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+}
+
+.section-desc {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
 .dark {
   background: #f1eee9;
 }
 
-/* ROOMS */
+/* 🔥 ROOMS FIXED (BIGGER TEXT) */
 .room {
   display: flex;
+  align-items: center;
   gap: 60px;
   margin-top: 100px;
 }
@@ -109,16 +147,31 @@ nav a:hover {
   text-align: left;
 }
 
-/* BUTTON */
-.btn {
-  background: #c59d5f;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
+.room-text h3 {
+  font-size: 2.8rem; /* BIGGER */
+  margin-bottom: 20px;
+  font-family: 'Libre Baskerville', serif;
 }
 
-/* BOOKING SECTION */
+.room-text p {
+  font-size: 1.15rem; /* BIGGER */
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.room-text li {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.room-text span {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 1.2rem;
+  color: #c59d5f;
+}
+
+/* BOOKING */
 .booking-buttons {
   margin-top: 40px;
   display: flex;
@@ -128,21 +181,23 @@ nav a:hover {
 }
 
 .booking-btn {
-  padding: 12px 25px;
+  padding: 14px 28px;
   border: 1px solid #c59d5f;
   border-radius: 25px;
   color: #c59d5f;
   text-decoration: none;
+  font-size: 1rem;
 }
 
 .booking-btn:hover {
   background: #c59d5f;
-  color: white;
+  color: #fff;
 }
 
 .contact-box {
   margin-top: 40px;
   background: #f8f6f2;
-  padding: 25px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 1.1rem;
 }
