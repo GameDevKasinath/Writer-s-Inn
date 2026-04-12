@@ -1,16 +1,32 @@
+/* Base resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and sections */
 body {
     font-family: 'Inter', sans-serif;
-    background: #f5f1e9; /* warm cream */
-    color: #2f3e2f;
+    background: #f5f1e9; /* warm cream background matching logo */
+    color: #2f3e2f; /* dark forest green for text */
+}
+.section {
+    padding: 60px 30px;
+    text-align: center;
+}
+.section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+.section p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-/* HEADER */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -18,24 +34,23 @@ header {
     padding: 15px 40px;
     background: #f5f1e9;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
 }
-
 .logo img {
-    height: 50px;
+    height: 50px; /* adjust as needed */
 }
-
 nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #2f3e2f;
     font-size: 0.95rem;
 }
-
 nav a:hover {
-    color: #556b4f;
+    color: #556b4f; /* slightly lighter green on hover */
 }
 
-/* HERO */
+/* Hero Section */
 .hero {
     height: 85vh;
     background: url('images/hero.jpg') center/cover no-repeat;
@@ -43,74 +58,81 @@ nav a:hover {
     align-items: center;
     justify-content: center;
 }
-
 .overlay {
     background: rgba(245,241,233,0.85);
     padding: 40px;
     text-align: center;
     border-radius: 10px;
+    max-width: 90%;
 }
-
 .overlay h2 {
-    font-family: 'Cormorant Garamond', serif;
     font-size: 2.8rem;
 }
-
 .overlay p {
     margin: 15px 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
-/* BUTTON */
+/* Buttons */
 .btn {
+    display: inline-block;
     background: #556b4f;
     color: white;
     padding: 10px 25px;
     text-decoration: none;
     border-radius: 25px;
+    margin-top: 15px;
 }
 
-/* SECTIONS */
-.section {
-    padding: 60px 30px;
-    text-align: center;
-}
-
-.section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 20px;
-}
-
-.light {
-    background: #eae4d9;
-}
-
-/* ROOMS */
+/* Rooms Grid (Flex) */
 .room-container {
     display: flex;
     justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
-
 .room {
     max-width: 300px;
 }
-
 .room img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-/* GALLERY */
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .gallery img {
-    width: 200px;
+    width: 220px;
     margin: 10px;
     border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
-/* FOOTER */
+/* WhatsApp Button */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+#whatsapp-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Footer */
 footer {
     background: #2f3e2f;
     color: #eee;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
