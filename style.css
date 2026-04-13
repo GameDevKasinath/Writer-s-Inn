@@ -1,6 +1,6 @@
 :root {
   --bg: #f8f5ef;
-  --surface: rgba(255, 255, 255, 0.72);
+  --surface: rgba(255, 255, 255, 0.74);
   --surface-strong: #ffffff;
   --text: #232323;
   --muted: #666159;
@@ -61,7 +61,7 @@ button {
 }
 
 .nav.scrolled {
-  --nav-alpha: 0.90;
+  --nav-alpha: 0.92;
   box-shadow: 0 10px 30px rgba(35, 35, 35, 0.06);
   padding-top: 14px;
   padding-bottom: 14px;
@@ -225,6 +225,10 @@ button {
   margin-bottom: 14px;
 }
 
+.eyebrow.accent {
+  color: #8f6d40;
+}
+
 .hero-content h1 {
   font-family: 'Libre Baskerville', serif;
   font-size: clamp(3.2rem, 7vw, 6.2rem);
@@ -330,6 +334,7 @@ button {
   flex: 1.08;
   min-height: 480px;
   overflow: hidden;
+  position: relative;
 }
 
 .room-media img {
@@ -341,6 +346,21 @@ button {
 
 .room-card:hover .room-media img {
   transform: scale(1.04);
+}
+
+.room-badge {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  color: #27221c;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .room-copy {
@@ -548,14 +568,12 @@ button {
   background: rgba(255, 255, 255, 0.18);
 }
 
-.fade-reveal,
 [data-reveal] {
   opacity: 0;
   transform: translateY(34px);
   transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
-.fade-reveal.is-visible,
 [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -634,12 +652,6 @@ button {
 
   .room-copy {
     padding: 22px 18px 20px;
-  }
-
-  .room-topline,
-  .room-actions,
-  .contact-card {
-    grid-template-columns: 1fr;
   }
 
   .room-topline,
