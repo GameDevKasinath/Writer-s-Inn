@@ -3,7 +3,7 @@ const heroOverlay = document.getElementById("heroOverlay");
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
-const revealTargets = document.querySelectorAll("[data-reveal], .fade-reveal");
+const revealTargets = document.querySelectorAll("[data-reveal]");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -22,7 +22,8 @@ revealTargets.forEach((el) => observer.observe(el));
 function setHeroOverlay() {
   const y = window.scrollY || 0;
   const max = 420;
-  const opacity = Math.min(0.42, y / max * 0.42);
+  const opacity = Math.min(0.42, (y / max) * 0.42);
+
   document.documentElement.style.setProperty("--hero-overlay", opacity.toFixed(3));
   nav.classList.toggle("scrolled", y > 10);
 }
