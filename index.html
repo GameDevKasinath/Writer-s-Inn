@@ -1,103 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writer's Inn</title>
 
-<title>Writer's Inn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header class="nav">
-  <div class="brand">
-    <img src="images/logo.png" class="logo">
-    <div>
-      <div class="title">WRITER'S INN</div>
-      <div class="subtitle">HERITAGE HOMESTAY</div>
-    </div>
-  </div>
+  <header class="nav" id="siteNav">
+    <a class="brand" href="#">
+      <img src="images/logo.png" alt="Writer's Inn logo" class="logo" />
+      <span class="brand-text">
+        <span class="title">WRITER'S INN</span>
+        <span class="subtitle">HERITAGE HOMESTAY</span>
+      </span>
+    </a>
 
-  <nav class="desktop-nav">
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#booking">Book</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#">Home</a>
     <a href="#rooms">Rooms</a>
     <a href="#booking">Book</a>
-  </nav>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#">Home</a>
-  <a href="#rooms">Rooms</a>
-  <a href="#booking">Book</a>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-overlay" id="overlay"></div>
-
-  <div class="hero-content">
-    <h1>Writer's Inn</h1>
-    <p>A refined heritage homestay for calm, comfort and timeless stays.</p>
-    <a href="#rooms" class="btn">Explore Rooms</a>
   </div>
-</section>
 
-<!-- ROOMS -->
-<section id="rooms" class="section fade">
-<h2 class="section-title">Our Signature Rooms</h2>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-overlay" id="heroOverlay"></div>
 
-<div class="room">
-  <img src="images/room1.jpg">
-  <div class="room-info">
-    <h3>Heritage Double Room</h3>
-    <p>Elegant heritage interiors with premium comfort for a peaceful stay.</p>
-    <div class="features">
-      <span>King Bed</span><span>AC</span><span>WiFi</span><span>Balcony</span>
-    </div>
-    <div class="bottom">
-      <span class="price">₹2,500</span>
-      <a href="#booking" class="btn">Book Now</a>
-    </div>
-  </div>
-</div>
+      <div class="hero-content" data-reveal>
+        <p class="eyebrow">Kerala • Calm • Comfort</p>
+        <h1>Writer's Inn</h1>
+        <p class="hero-copy">
+          A refined heritage homestay designed for comfort, quiet mornings, and stays that feel thoughtful from the very first glance.
+        </p>
 
-<div class="room">
-  <img src="images/room2.jpg">
-  <div class="room-info">
-    <h3>Heritage Twin Room</h3>
-    <p>Spacious twin layout perfect for relaxed and flexible stays.</p>
-    <div class="features">
-      <span>Twin Beds</span><span>AC</span><span>WiFi</span><span>Hot Water</span>
-    </div>
-    <div class="bottom">
-      <span class="price">₹2,200</span>
-      <a href="#booking" class="btn">Book Now</a>
-    </div>
-  </div>
-</div>
+        <div class="hero-actions">
+          <a href="#rooms" class="btn btn-primary">Explore Rooms</a>
+          <a href="#booking" class="btn btn-secondary">Book Your Stay</a>
+        </div>
 
-</section>
+        <div class="hero-pills" aria-label="Highlights">
+          <span>Nature view</span>
+          <span>Premium stay</span>
+          <span>Warm hospitality</span>
+        </div>
+      </div>
+    </section>
 
-<!-- BOOKING -->
-<section id="booking" class="section booking fade">
-<h2>Book Your Stay</h2>
+    <section class="section intro" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">About the stay</p>
+        <h2>A peaceful place with a premium feel</h2>
+      </div>
+      <p class="section-desc">
+        Writer's Inn brings together heritage charm, clean design, and a calm atmosphere. It is built to feel welcoming on a phone, elegant on a laptop, and memorable for every guest.
+      </p>
+    </section>
 
-<div class="booking-links">
-  <a href="#"><img src="images/booking.png">Booking.com</a>
-  <a href="#"><img src="images/agoda.png">Agoda</a>
-  <a href="#"><img src="images/airbnb.png">Airbnb</a>
-  <a href="#"><img src="images/mmt.png">MakeMyTrip</a>
-  <a href="#"><img src="images/tripadvisor.png">Tripadvisor</a>
-</div>
+    <section class="section rooms-section" id="rooms">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Our rooms</p>
+        <h2>Signature stays with space to breathe</h2>
+      </div>
 
-</section>
+      <article class="room-card" data-reveal>
+        <div class="room-media">
+          <img src="images/room1.jpg" alt="Heritage Double Room" />
+        </div>
 
-<script src="script.js"></script>
+        <div class="room-copy">
+          <div class="room-topline">
+            <span class="room-kicker">Heritage Collection</span>
+            <span class="room-price">₹2,500 <small>/ night</small></span>
+          </div>
+
+          <h3>Heritage Double Room</h3>
+          <p>
+            Designed with a calm heritage mood, this room offers a generous bed, soft natural light, and a peaceful setting ideal for couples or solo travellers.
+          </p>
+
+          <div class="feature-row" aria-label="Room features">
+            <span>King bed</span>
+            <span>AC</span>
+            <span>WiFi</span>
+            <span>Balcony</span>
+          </div>
+
+          <div class="room-actions">
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+            <p class="room-note">Quiet stay • Elegant interiors • Thoughtful comfort</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="room-card reverse" data-reveal>
+        <div class="room-media">
+          <img src="images/room2.jpg" alt="Heritage Twin Room" />
+        </div>
+
+        <div class="room-copy">
+          <div class="room-topline">
+            <span class="room-kicker">Heritage Collection</span>
+            <span class="room-price">₹2,200 <small>/ night</small></span>
+          </div>
+
+          <h3>Heritage Twin Room</h3>
+          <p>
+            Spacious and easy to settle into, this room is perfect for friends or families who want comfort, flexibility, and a relaxed atmosphere.
+          </p>
+
+          <div class="feature-row" aria-label="Room features">
+            <span>Twin beds</span>
+            <span>AC</span>
+            <span>WiFi</span>
+            <span>Hot water</span>
+          </div>
+
+          <div class="room-actions">
+            <a href="#booking" class="btn btn-primary">Book Now</a>
+            <p class="room-note">Roomy layout • Bright feel • Relaxed stay</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section booking-section" id="booking" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Book direct or via platforms</p>
+        <h2>Book Your Stay</h2>
+      </div>
+
+      <div class="booking-grid">
+        <a class="booking-link" href="#" aria-label="Booking.com">
+          <img src="images/booking.png" alt="" />
+          <span>Booking.com</span>
+        </a>
+
+        <a class="booking-link" href="#" aria-label="Agoda">
+          <img src="images/agoda.png" alt="" />
+          <span>Agoda</span>
+        </a>
+
+        <a class="booking-link" href="#" aria-label="Airbnb">
+          <img src="images/airbnb.png" alt="" />
+          <span>Airbnb</span>
+        </a>
+
+        <a class="booking-link" href="#" aria-label="MakeMyTrip">
+          <img src="images/mmt.png" alt="" />
+          <span>MakeMyTrip</span>
+        </a>
+
+        <a class="booking-link" href="#" aria-label="Tripadvisor">
+          <img src="images/tripadvisor.png" alt="" />
+          <span>Tripadvisor</span>
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div>
+          <p class="contact-label">Phone</p>
+          <p class="contact-value">+91 98765 43210</p>
+        </div>
+        <div>
+          <p class="contact-label">Email</p>
+          <p class="contact-value">writersinn@email.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
