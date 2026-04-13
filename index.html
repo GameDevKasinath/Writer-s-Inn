@@ -22,87 +22,73 @@
     </div>
   </div>
 
-  <nav>
+  <!-- Desktop nav -->
+  <nav class="desktop-nav">
     <a href="#">Home</a>
     <a href="#rooms">Rooms</a>
     <a href="#booking">Book</a>
   </nav>
+
+  <!-- Mobile menu -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
+
+<!-- Mobile dropdown -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#">Home</a>
+  <a href="#rooms">Rooms</a>
+  <a href="#booking">Book</a>
+</div>
 
 <!-- HERO -->
 <section class="hero fade">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Writer's Inn</h1>
-    <p>A refined heritage homestay designed for comfort, calm and meaningful stays.</p>
+    <p>A refined heritage homestay designed for calm, comfort and timeless stays.</p>
     <a href="#rooms" class="btn">Explore Rooms</a>
   </div>
 </section>
 
 <!-- ROOMS -->
 <section id="rooms" class="section">
-
 <h2 class="section-title fade">Our Signature Rooms</h2>
 
 <div class="room ultra fade">
-  <div class="room-image">
-    <img src="images/room1.jpg">
-  </div>
-
+  <img src="images/room1.jpg">
   <div class="room-info">
     <h3>Heritage Double Room</h3>
-
-    <p>
-      Experience refined comfort with heritage interiors, warm lighting,
-      and a peaceful atmosphere designed for couples and solo travellers.
-    </p>
+    <p>Elegant heritage interiors with premium comfort, ideal for peaceful and relaxing stays.</p>
 
     <div class="features">
-      <span>🛏 King Bed</span>
-      <span>❄ AC</span>
-      <span>📶 WiFi</span>
-      <span>🌿 Balcony</span>
+      <span>King Bed</span>
+      <span>AC</span>
+      <span>WiFi</span>
+      <span>Balcony</span>
     </div>
 
     <div class="bottom">
-      <div>
-        <span class="price">₹2,500</span>
-        <small>/ night</small>
-        <p class="urgency">Only 2 rooms left</p>
-      </div>
-
+      <span class="price">₹2,500 / night</span>
       <a href="#booking" class="btn">Book Now</a>
     </div>
   </div>
 </div>
 
-<div class="room ultra reverse fade">
-  <div class="room-image">
-    <img src="images/room2.jpg">
-  </div>
-
+<div class="room ultra fade">
+  <img src="images/room2.jpg">
   <div class="room-info">
     <h3>Heritage Twin Room</h3>
-
-    <p>
-      Spacious twin layout designed for friends and families,
-      offering comfort, flexibility, and calm surroundings.
-    </p>
+    <p>Spacious twin layout designed for comfort, flexibility, and a relaxed experience.</p>
 
     <div class="features">
-      <span>🛏 Twin Beds</span>
-      <span>❄ AC</span>
-      <span>📶 WiFi</span>
-      <span>🚿 Hot Water</span>
+      <span>Twin Beds</span>
+      <span>AC</span>
+      <span>WiFi</span>
+      <span>Hot Water</span>
     </div>
 
     <div class="bottom">
-      <div>
-        <span class="price">₹2,200</span>
-        <small>/ night</small>
-        <p class="urgency">Only 3 rooms left</p>
-      </div>
-
+      <span class="price">₹2,200 / night</span>
       <a href="#booking" class="btn">Book Now</a>
     </div>
   </div>
@@ -112,7 +98,6 @@
 
 <!-- BOOKING -->
 <section id="booking" class="section booking fade">
-
 <h2>Book Your Stay</h2>
 
 <div class="booking-links">
@@ -124,13 +109,12 @@
 </div>
 
 <div class="contact-box">
-  <p>📞 +91 89217 32121</p>
-  <p>📧 thewritersinnofficial@gmail.com</p>
+  <p>📞 +91 98765 43210</p>
+  <p>📧 writersinn@email.com</p>
 </div>
 
 </section>
 
 <script src="script.js"></script>
-
 </body>
 </html>
