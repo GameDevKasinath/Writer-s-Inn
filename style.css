@@ -1,79 +1,43 @@
-/* RESET */
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: #f8f6f2;
+  background:#f8f6f2;
 }
-
-/* SMART SCALE */
-:root { --scale:1; }
-
-@media (max-width:1024px){ :root{ --scale:0.9; } }
-@media (max-width:768px){ :root{ --scale:0.85; } }
 
 /* NAV */
 .nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.6);
-  z-index: 1000;
+  position:fixed;
+  width:100%;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.6);
+  z-index:1000;
 }
 
-.logo { height: 50px; }
+.logo { height:50px; }
 
-.title { font-family: 'Libre Baskerville', serif; }
-.subtitle { font-size: 0.7rem; color: #555; }
-
-.desktop-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #333;
-}
-
-/* MOBILE MENU */
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 80px;
-  width: 100%;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
-  display: none;
-  flex-direction: column;
-  text-align: center;
-}
-
-.mobile-menu a {
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-  text-decoration: none;
-  color: #333;
-}
+.title { font-family:'Libre Baskerville', serif; }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: url("images/hero.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height:100vh;
+  background:url("images/hero.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
 }
 
 .hero-overlay {
   position:absolute;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.25);
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0);
+  transition:0.4s;
 }
 
 .hero-content {
@@ -83,39 +47,31 @@ body {
 }
 
 .hero-content h1 {
-  font-size: calc(5rem * var(--scale));
-  font-family: 'Libre Baskerville', serif;
-}
-
-.hero-content p {
-  margin: 20px 0;
+  font-size:5rem;
+  font-family:'Libre Baskerville', serif;
 }
 
 /* BUTTON */
 .btn {
   background:#c59d5f;
-  color:white;
   padding:12px 28px;
   border-radius:30px;
+  color:white;
   text-decoration:none;
   transition:0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-}
-
-/* SECTION */
-.section {
-  padding: calc(120px * var(--scale)) calc(60px * var(--scale));
+  transform:scale(1.08);
 }
 
 /* ROOMS */
+.section { padding:120px 60px; }
+
 .room {
   display:flex;
   gap:40px;
   margin-bottom:80px;
-  align-items:center;
 }
 
 .room img {
@@ -128,28 +84,25 @@ body {
 .features span {
   background:#eee;
   padding:6px 10px;
-  margin:5px;
   border-radius:20px;
-  display:inline-block;
+  margin:5px;
 }
 
-.bottom {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:15px;
-}
-
-/* BOOKING */
+/* BOOKING FIX */
 .booking-links a {
   display:inline-flex;
-  gap:10px;
-  margin:10px;
-  padding:12px 20px;
-  border:1px solid #c59d5f;
+  align-items:center;
+  gap:8px;
+  padding:10px 18px;
+  margin:8px;
   border-radius:40px;
-  text-decoration:none;
-  color:#c59d5f;
+  border:1px solid #c59d5f;
+  font-size:0.9rem;
+}
+
+.booking-links img {
+  height:18px;  /* 🔥 FIXED SIZE */
+  width:auto;
 }
 
 /* ANIMATION */
@@ -164,28 +117,8 @@ body {
   transform:translateY(0);
 }
 
-/* 📱 MOBILE */
-@media (max-width:768px){
-
-  .desktop-nav { display:none; }
-  .menu-toggle { display:block; }
-
-  .room {
-    flex-direction:column;
-  }
-
-  .room img {
-    width:100%;
-  }
-
-  .bottom {
-    flex-direction:column;
-    gap:10px;
-    align-items:flex-start;
-  }
-
-  .btn {
-    width:100%;
-    text-align:center;
-  }
+/* MOBILE */
+@media(max-width:768px){
+  .room { flex-direction:column; }
+  .room img { width:100%; }
 }
